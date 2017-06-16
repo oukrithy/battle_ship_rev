@@ -1,0 +1,70 @@
+
+
+
+if (hits === 5) {
+  $("td").off("click")
+  $("#miss").text("Winner!!!!!!!!")
+} else if (board[i][j] !== 1) {
+  $("#miss").text("Miss!!!!!!!!!!!!");
+  $(this).css({"background":"red"})
+  board[i][j] = -1
+} else if (board[i][j] == 1){
+  $("#miss").text("Hit!!!!!!!!!!!")
+  $(this).css({"background":"blue"})
+  hits++
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+var shipsFive = [[],[],[],[],[]]
+//
+// function randomizerShip() {
+//   var x = 0;
+//   //loops through the array into the array
+//   if (x < 5) {
+//   for (var i = 1; i <= 5; i++) {
+//   do {  //Randomizes the placement of row
+//     var shipRow = Math.floor(Math.random()* 8 + 1)
+//     //push to the array
+//
+//     //Randomizes the place of column
+//     var shipCol = Math.floor(Math.random()* 8 + 1)
+//     //push to the array
+//
+//
+//
+//   } while (board[shipRow][shipCol] === 1 || board[shipRow][shipCol] === 2)
+//
+//     //replaces zero board tile to 1
+//
+//
+//
+//     board[shipRow - 1][shipCol] = 2
+//     board[shipRow  + 1][shipCol] = 2
+//     board[shipRow][shipCol - 1 ] = 2
+//     board[shipRow][shipCol + 1 ] = 2
+//     board[shipRow - 1][shipCol - 1] = 2
+//     board[shipRow  - 1][shipCol +1] = 2
+//     board[shipRow +1][shipCol - 1 ] = 2
+//     board[shipRow +1][shipCol + 1 ] = 2
+//
+//     console.log(board[shipRow][shipCol] = 1)
+//
+//     console.log(board[shipRow][shipCol + 1] = 1)
+//     shipsFive[x].push(shipRow);
+//     shipsFive[x].push(shipCol);
+//     x++;
+//     }
+//   }
+//   console.log(shipsFive)
+// }
