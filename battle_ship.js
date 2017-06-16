@@ -18,16 +18,21 @@ $(document).ready(function(){
     if (board[i][j] == 0) {
       $("#result").text("Miss!!!!!!!!!!!!");
       $(this).css({"background":"red"})
-      board[i][j] = -1
+      board[i][j] = 9
       torpedoUsed++
     } else if (board[i][j] == 1){
       $("#result").text("Hit!!!!!!!!!!!")
       $(this).css({"background":"blue"})
       hits++
-      board[i][j] = 'x'
+      board[i][j] = 9
       torpedoUsed++
-    } else
-      alert('You're close')
+    } else if (board[i][j] == 2){
+      $("#result").text("ALMOST!!!!!!!!!!!!");
+      $(this).css({"background":"red"})
+      board[i][j] = 9
+      torpedoUsed++
+    } else {
+      alert("You already fired there")
     }
 
     if (hits > 4) {
@@ -35,7 +40,7 @@ $(document).ready(function(){
       $("#result").text("Winner!!!!!!!!")
     }
 
-    if (torpedoUsed < 1) {
+    if (torpedoUsed < 25) {
       console.log(torpedoUsed);
       $("#torpedos").text("Torpedos Used: " + torpedoUsed)
     } else {

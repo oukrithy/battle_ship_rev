@@ -24,10 +24,10 @@ $(document).ready(function(){
       $("#result").text("Hit!!!!!!!!!!!")
       $(this).css({"background":"blue"})
       hits++
-      board[i][j] = 'x'
+      board[i][j] = 5
       torpedoUsed++
-    } else
-      alert('You're close')
+    } else {
+      alert("You're close")
     }
 
     if (hits > 4) {
